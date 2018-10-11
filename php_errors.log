@@ -1,0 +1,18 @@
+[08-Oct-2018 22:14:30 UTC] PHP Warning:  Uncaught ErrorException: require_once(config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/trail_buddy/resources/views/login.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/trail_buddy/resources/views/login.php(12): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(co...', '/home/ubuntu/wo...', 12, Array)
+#1 /home/ubuntu/workspace/trail_buddy/resources/views/login.php(12): require_once()
+#2 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(43): include('/home/ubuntu/wo...')
+#3 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(21): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/ubuntu/wo...', Array)
+#4 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/View.php(142): Illuminate\View\Engines\PhpEngine->get('/home/ubuntu/wo...', Array)
+#5 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/ in /home/ubuntu/workspace/trail_buddy/resources/views/login.php on line 12
+[08-Oct-2018 22:14:30 UTC] PHP Fatal error:  Illuminate\View\Engines\PhpEngine::main(): Failed opening required 'config.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/trail_buddy/resources/views/login.php on line 12
+[08-Oct-2018 22:15:22 UTC] PHP Warning:  Uncaught ErrorException: require_once(config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/trail_buddy/resources/views/register.php:3
+Stack trace:
+#0 /home/ubuntu/workspace/trail_buddy/resources/views/register.php(3): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(co...', '/home/ubuntu/wo...', 3, Array)
+#1 /home/ubuntu/workspace/trail_buddy/resources/views/register.php(3): require_once()
+#2 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(43): include('/home/ubuntu/wo...')
+#3 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(21): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/ubuntu/wo...', Array)
+#4 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/View.php(142): Illuminate\View\Engines\PhpEngine->get('/home/ubuntu/wo...', Array)
+#5 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illumi in /home/ubuntu/workspace/trail_buddy/resources/views/register.php on line 3
+[08-Oct-2018 22:15:22 UTC] PHP Fatal error:  Illuminate\View\Engines\PhpEngine::main(): Failed opening required 'config.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/trail_buddy/resources/views/register.php on line 3

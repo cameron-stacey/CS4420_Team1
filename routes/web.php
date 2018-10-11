@@ -15,8 +15,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get ('register', function () {
+Route::get ('/register', function () {
     return view('register');
+});
+
+Route::get ('/login', function () {
+    return view('login');
+});
+
+Route::get ('/welcome', function() {
+    return view ('welcome');
+});
+
+Route::get ('/logout', function() {
+    return routes ('logout');
+});
+
+Route::get  ('/pass_reset', function() {
+   return view ('pass_reset'); 
 });
 
 Auth::routes();
