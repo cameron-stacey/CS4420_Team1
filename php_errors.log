@@ -16,3 +16,8 @@ Stack trace:
 #4 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/View/View.php(142): Illuminate\View\Engines\PhpEngine->get('/home/ubuntu/wo...', Array)
 #5 /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illumi in /home/ubuntu/workspace/trail_buddy/resources/views/register.php on line 3
 [08-Oct-2018 22:15:22 UTC] PHP Fatal error:  Illuminate\View\Engines\PhpEngine::main(): Failed opening required 'config.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/trail_buddy/resources/views/register.php on line 3
+[17-Oct-2018 20:45:11 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[17-Oct-2018 21:03:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[17-Oct-2018 21:26:03 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[17-Oct-2018 23:21:08 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[17-Oct-2018 23:42:30 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
