@@ -13,8 +13,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #c0f7b7;
+                color: #1b223d;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -63,6 +63,8 @@
                 margin-bottom: 30px;
             }
         </style>
+        
+        
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -83,12 +85,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Trails</a> 
+                    <a href="https://laracasts.com">Gallery</a>
+                    <a href="https://laravel-news.com">Videos</a>
                 </div>
             </div>
         </div>
