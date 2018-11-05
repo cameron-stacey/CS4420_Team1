@@ -16,15 +16,18 @@ class Trails extends Migration
         Schema::create('trails', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('city');
-            $table->string('state');
+            $table->unsignedInteger('locationId');
+            $table->foreign('locationId')->references('locationId')->on('cityState');
             $table->integer('elevation');
             $table->integer('distance');
             $table->integer('duration');
             $table->string('difficulty');
             $table->tinyInteger('guided');
             $table->tinyInteger('pet_friendly');
-            $table->text('animals_sighted');
+            $table->unsignedInteger('commentId');
+            $table->foreign('commentId')->references('id')->on('comments');
+            $table->unsignedInteger('picId');
+            $table->foreign('picId')->references('id')->on('pics');
         });
         //
     }

@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
             $table->binary('gender');
             $table->integer('age');
             $table->text('about');
-            $table->string('city');
-            $table->string('state');
+            $table->unsignedInteger('locationId');
+            $table->foreign('locationId')->references('locationId')->on('cityState');
         });
     }
 
