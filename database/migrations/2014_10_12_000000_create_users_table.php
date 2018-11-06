@@ -21,11 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->binary('gender');
-            $table->integer('age');
-            $table->text('about');
-            $table->unsignedInteger('locationId');
-            $table->foreign('locationId')->references('locationId')->on('cityState');
         });
     }
 

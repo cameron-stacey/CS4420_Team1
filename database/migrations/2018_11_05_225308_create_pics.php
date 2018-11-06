@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComments extends Migration
+class CreatePics extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateComments extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('pics', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('comment');
+            $table->unsignedInteger('trailId');
+            $table->foreign('trailId')->references('trailId')->on('trails');
         });
         //
     }
@@ -27,6 +28,7 @@ class CreateComments extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');//
+        Schema::dropIfExists('pics');
+        //
     }
 }

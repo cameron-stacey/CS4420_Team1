@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Trails extends Migration
+class CreateUserExtendedInfo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class Trails extends Migration
      */
     public function up()
     {
-        Schema::create('trails', function (Blueprint $table) {
-            $table->increments('trailId');
-            $table->string('name');
+        Schema::create('userExtInfo', function (Blueprint $table){
+            $table->unsignedInteger('userId');
+            $table->foreign('userId')->references('id')->on('users');
+            $table->binary('gender');
+            $table->integer('age');
+            $table->text('about');
             $table->unsignedInteger('locationId');
             $table->foreign('locationId')->references('locationId')->on('cityState');
-            $table->integer('elevation');
-            $table->integer('distance');
-            $table->integer('duration');
-            $table->string('difficulty');
-            $table->tinyInteger('guided');
-            $table->tinyInteger('pet_friendly');
         });
         //
     }
@@ -35,7 +32,7 @@ class Trails extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trails');
+        Schema::dropIfExists('userExtInfo');
         //
     }
 }
