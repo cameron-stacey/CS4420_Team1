@@ -14,9 +14,11 @@ class CreatePics extends Migration
     public function up()
     {
         Schema::create('pics', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('picsId');
             $table->unsignedInteger('trailId');
             $table->foreign('trailId')->references('trailId')->on('trails');
+            $table->string('picName');
+            $table->string('path')
         });
         //
     }
