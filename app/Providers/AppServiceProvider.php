@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace trailBuddy\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

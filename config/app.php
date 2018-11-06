@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Trail Buddy'),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        trailBuddy\Providers\AppServiceProvider::class,
+        trailBuddy\Providers\AuthServiceProvider::class,
+        // trailBuddy\Providers\BroadcastServiceProvider::class,
+        trailBuddy\Providers\EventServiceProvider::class,
+        trailBuddy\Providers\RouteServiceProvider::class,
 
     ],
 
