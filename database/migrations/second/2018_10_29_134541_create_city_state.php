@@ -20,6 +20,7 @@ class CreateCityState extends Migration
             $table->foreign('cityId')->references('cityId')->on('city');
             $table->unsignedInteger('stateId');
             $table->foreign('stateId')->references('stateId')->on('state');
+            $table->string('address');
         });
         //
     }

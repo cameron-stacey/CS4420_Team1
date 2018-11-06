@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePics extends Migration
+class CreateTrailsGuidesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreatePics extends Migration
      */
     public function up()
     {
-        Schema::create('pics', function (Blueprint $table) {
-            $table->increments('picsId');
+        Schema::create('trails_guides', function (Blueprint $table) {
             $table->unsignedInteger('trailId');
             $table->foreign('trailId')->references('trailId')->on('trails');
-            $table->string('picName');
-            $table->string('path');
+            $table->unsignedInteger('guideId');
+            $table->foreign('guideId')->references('id')->on('guides');
         });
-        //
     }
 
     /**
@@ -30,7 +28,6 @@ class CreatePics extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pics');
-        //
+        Schema::dropIfExists('trails_guides');
     }
 }
