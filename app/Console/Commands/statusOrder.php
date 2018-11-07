@@ -4,21 +4,21 @@ namespace trailBuddy\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class runMigrations extends Command
+class statusOrder extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'migrate:order';
+    protected $signature = 'migrate:statusOrder';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'runs Migrations in a specified order';
+    protected $description = 'runs the status of all migrations in specified order';
 
     /**
      * Create a new command instance.
@@ -37,10 +37,9 @@ class runMigrations extends Command
      */
     public function handle()
     {
-        $this->call('migrate', ['--path' => 'database/migrations/first']);
-        $this->call('migrate', ['--path' => 'database/migrations/second']);
-        $this->call('migrate', ['--path' => 'database/migrations']);
-        $this->call('migrate:statusOrder');
+        $this->call('migrate:status', ['--path' => 'database/migrations/first']);
+        $this->call('migrate:status', ['--path' => 'database/migrations/second']);
+        $this->call('migrate:status', ['--path' => 'database/migrations']);
         //
     }
 }
