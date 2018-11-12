@@ -38,3 +38,11 @@ Route::get  ('/pass_reset', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/trails',function() {
+    return view ('trails');
+});
+
+Route::get('/gallery',function() {
+    return view ('gallery');
+});

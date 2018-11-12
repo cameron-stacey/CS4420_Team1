@@ -85,9 +85,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Trails</a> 
-                    <a href="https://laracasts.com">Gallery</a>
-                    <a href="https://laravel-news.com">Videos</a>
+                    <a href="{{ url('/trails') }}">Trails</a> 
+                    <a href="{{ url('/gallery') }}">Gallery</a>
+                    <a href="">Videos</a>
                 </div>
             </div>
         </div>
