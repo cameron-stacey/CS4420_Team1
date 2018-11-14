@@ -3977,6 +3977,10 @@ class ComposerStaticInitfdd51b229c171c01f9413ec190732c83
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'city_seeder' => __DIR__ . '/../..' . '/database/seeds/city_seeder.php',
+        'city_state_seeder' => __DIR__ . '/../..' . '/database/seeds/city_state_seeder.php',
+        'comment_seeder' => __DIR__ . '/../..' . '/database/seeds/comment_seeder.php',
+        'guides_seeder' => __DIR__ . '/../..' . '/database/seeds/guides_seeder.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
@@ -4045,6 +4049,11 @@ class ComposerStaticInitfdd51b229c171c01f9413ec190732c83
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'pics_seeder' => __DIR__ . '/../..' . '/database/seeds/pics_seeder.php',
+        'state_seeder' => __DIR__ . '/../..' . '/database/seeds/state_seeder.php',
+        'trailBuddy\\Console\\Commands\\pushToMinedice' => __DIR__ . '/../..' . '/app/Console/Commands/pushToMinedice.php',
+        'trailBuddy\\Console\\Commands\\runMigrations' => __DIR__ . '/../..' . '/app/Console/Commands/runMigrations.php',
+        'trailBuddy\\Console\\Commands\\statusOrder' => __DIR__ . '/../..' . '/app/Console/Commands/statusOrder.php',
         'trailBuddy\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'trailBuddy\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'trailBuddy\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -4068,6 +4077,9 @@ class ComposerStaticInitfdd51b229c171c01f9413ec190732c83
         'trailBuddy\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'trailBuddy\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'trailBuddy\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'trail_guides_seeder' => __DIR__ . '/../..' . '/database/seeds/trail_guides_seeder.php',
+        'trail_seeder' => __DIR__ . '/../..' . '/database/seeds/trail_seeder.php',
+        'user_seeder' => __DIR__ . '/../..' . '/database/seeds/user_seeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
