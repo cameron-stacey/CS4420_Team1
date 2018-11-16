@@ -21,3 +21,9 @@ Stack trace:
 [17-Oct-2018 21:26:03 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
 [17-Oct-2018 23:21:08 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
 [17-Oct-2018 23:42:30 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/trail_buddy/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 500
+[16-Nov-2018 21:18:51 UTC] PHP Fatal error:  Class 'trailBuddy\app\Http\Controllers\Controller' not found in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 7
+[16-Nov-2018 21:19:30 UTC] PHP Fatal error:  Class 'trailBuddy\app\Controller' not found in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 7
+[16-Nov-2018 21:36:28 UTC] PHP Fatal error:  Cannot use trail_buddy\app\Trail as Trail because the name is already in use in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 7
+[16-Nov-2018 21:37:10 UTC] PHP Fatal error:  Class 'trail_Buddy\Http\Controllers\Controller' not found in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 8
+[16-Nov-2018 21:37:55 UTC] PHP Fatal error:  Class 'trail_buddy\app\Http\Controllers\Controller' not found in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 8
+[16-Nov-2018 21:38:22 UTC] PHP Fatal error:  Class 'trail_buddy\app\Http\Controller' not found in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 8

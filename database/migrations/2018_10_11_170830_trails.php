@@ -23,6 +23,7 @@ class Trails extends Migration
             $table->integer('duration');
             $table->string('difficulty');
             $table->tinyInteger('pet_friendly');
+            $table->timestamps();
         });
         //
     }

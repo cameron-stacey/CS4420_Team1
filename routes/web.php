@@ -15,33 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get ('/register', function () {
-    return view('register');
-});
-
-Route::get ('/login', function () {
-    return view('login');
-});
-
-Route::get ('/welcome', function() {
-    return view ('welcome');
-});
-
-Route::get ('/logout', function() {
-    return routes ('logout');
-});
-
-Route::get  ('/pass_reset', function() {
-   return view ('pass_reset'); 
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/trails',function() {
-    return view ('trails');
-});
+Route::resource('trails', 'TrailController');
 
 Route::get('/gallery',function() {
     return view ('gallery');
