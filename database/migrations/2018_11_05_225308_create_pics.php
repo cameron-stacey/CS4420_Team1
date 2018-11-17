@@ -17,7 +17,7 @@ class CreatePics extends Migration
             $table->increments('id');
             $table->unsignedInteger('trailId');
             $table->foreign('trailId')->references('id')->on('trails');
-            $table->string('picName');
+            $table->string('name');
             $table->string('path');
             $table->timestamps();
         });

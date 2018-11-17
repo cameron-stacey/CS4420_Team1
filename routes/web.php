@@ -23,6 +23,10 @@ Route::resource('trails', 'TrailController');
 
 Route::resource('states', 'StateController');
 
-Route::get('/gallery',function() {
-    return view ('gallery');
-});
+Route::resource('cities', 'CitiesController');
+
+Route::resource('comments', 'CommentController');
+
+Route::resource('guides', 'GuideController');
+
+Route::resource('pics', 'PicController');
