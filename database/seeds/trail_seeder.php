@@ -18,9 +18,9 @@ class trail_seeder extends Seeder
         $durations = [2,3,2,2,2,3,1,8,10,3,7,3,1,3,3];
         for ($i = 0; $i < sizeof($trails); $i++) {
             DB::table('trails')->insert([
-                'trailId' => $i+1,
+                'id' => $i+1,
                 'name' => $trails[$i],
-                'locationId' => DB::table('cityState')->where('locationId', 1)->value('locationId'),
+                'locationId' => DB::table('cityState')->where('id', 1)->value('id'),
                 'elevation' => $elevations[$i],
                 'distance' => $distances[$i],
                 'duration' => $durations[$i],

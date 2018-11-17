@@ -20,7 +20,8 @@ class CreateUserExtendedInfo extends Migration
             $table->integer('age');
             $table->text('about');
             $table->unsignedInteger('locationId');
-            $table->foreign('locationId')->references('locationId')->on('cityState');
+            $table->foreign('locationId')->references('id')->on('cityState');
+            $table->timestamps();
         });
         //
     }

@@ -12,7 +12,7 @@ class comment_seeder extends Seeder
     public function run()
     {
         $comment = ["Comment 1","Comment 2","Comment 3"];
-        $trails = DB::table('trails')->pluck('trailId');
+        $trails = DB::table('trails')->pluck('id');
         $j=1;
         foreach($trails as $trailId) {
             for ($i = 0; $i < sizeof($comment); $i++) {

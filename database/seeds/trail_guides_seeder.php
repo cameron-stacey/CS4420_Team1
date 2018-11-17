@@ -11,7 +11,7 @@ class trail_guides_seeder extends Seeder
      */
     public function run()
     {
-        $trails = DB::table('trails')->pluck('trailId');
+        $trails = DB::table('trails')->pluck('id');
         foreach ($trails as $trail) {
             DB::table('trails_guides')->insert([
                 'trailId' => $trail,

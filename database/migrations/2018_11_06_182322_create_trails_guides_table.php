@@ -15,9 +15,10 @@ class CreateTrailsGuidesTable extends Migration
     {
         Schema::create('trails_guides', function (Blueprint $table) {
             $table->unsignedInteger('trailId');
-            $table->foreign('trailId')->references('trailId')->on('trails');
+            $table->foreign('trailId')->references('id')->on('trails');
             $table->unsignedInteger('guideId');
             $table->foreign('guideId')->references('id')->on('guides');
+            $table->timestamps();
         });
     }
 

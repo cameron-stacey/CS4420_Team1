@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('trails', 'TrailController');
 
+Route::resource('states', 'StateController');
+
 Route::get('/gallery',function() {
     return view ('gallery');
 });

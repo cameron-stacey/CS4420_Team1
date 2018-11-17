@@ -19,9 +19,9 @@ class state_seeder extends Seeder
         "South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","
         Wisconsin","Wyoming"];
         for($i=0; $i < sizeof($allStates); $i++){
-            DB::table('state')-> insert([
-                'stateId' => $i + 1,
-                'stateName' => $allStates[$i],
+            DB::table('states')-> insert([
+                'id' => $i + 1,
+                'name' => $allStates[$i],
                 ]);
         }
         //

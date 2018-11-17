@@ -15,8 +15,8 @@ class pics_seeder extends Seeder
         $picNames = ["sign","devils playground trail","devils playground info"];
         for($i = 0; $i < sizeof($fileNames); $i++){
             DB::table('pics')->insert([
-                'picsId' => $i + 1,
-                'trailId' =>  DB::table('trails')->where('trailId', 1)->value('trailId'),
+                'id' => $i + 1,
+                'trailId' =>  DB::table('trails')->where('id', 1)->value('id'),
                 'picName' => $picNames[$i],
                 'path' => $fileNames[$i],
             ]);

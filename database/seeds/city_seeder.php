@@ -13,9 +13,9 @@ class city_seeder extends Seeder
     {
         $states = ["Colorado Springs","Manitu Springs","Denver","Castle Rock","Monument","Pueblo"];
         for($i = 0; $i < sizeof($states); $i++) {
-            DB::table('city')->insert([
-                'cityId' => $i + 1,
-                'cityName' => $states[$i],
+            DB::table('cities')->insert([
+                'id' => $i + 1,
+                'name' => $states[$i],
             ]);
         }
         //

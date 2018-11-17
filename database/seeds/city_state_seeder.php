@@ -11,11 +11,11 @@ class city_state_seeder extends Seeder
      */
     public function run()
     {
-        $cities = DB::table('city')->pluck('cityId');
+        $cities = DB::table('cities')->pluck('id');
         $state = 6;
         foreach($cities as $city){
           DB::table('cityState')->insert([
-                'locationId' => $city,
+                'id' => $city,
                 'stateId' => $state,
                 'cityId' => $city,
                 'address' => "location address",

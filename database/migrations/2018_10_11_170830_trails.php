@@ -14,10 +14,10 @@ class Trails extends Migration
     public function up()
     {
         Schema::create('trails', function (Blueprint $table) {
-            $table->increments('trailId');
+            $table->increments('id');
             $table->string('name');
             $table->unsignedInteger('locationId');
-            $table->foreign('locationId')->references('locationId')->on('cityState');
+            $table->foreign('locationId')->references('id')->on('cityState');
             $table->integer('elevation');
             $table->integer('distance');
             $table->integer('duration');

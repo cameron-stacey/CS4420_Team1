@@ -16,29 +16,17 @@
     <thead>
         <tr>
           <td>Name</td>
-          <td>Elevation</td>
-          <td>Location</td>
-          <td>Distance</td>
-          <td>Duration</td>
-          <td>Difficulty</td>
-          <td>Pet Friendly</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($trails as $trail)
+        @foreach($states as $state)
         <tr>
-            <td>{{$trail->name}}</td>
-            <td>{{$trail->elevation}}</td>
-            <td>{{$trail->location}}</td>
-            <td>{{$trail->distance}}</td>
-            <td>{{$trail->duration}}</td>
-            <td>{{$trail->difficulty}}</td>
-            <td>{{$trail->pet_friendly}}</td>
-            <td><a href="{{ route('trails.edit',[$trail->id])}}" class="btn btn-primary">Edit</a></td>
+            <td>{{$state->name}}</td>
+            <td><a href="{{ route('states.edit',[$state->id])}}" class="btn btn-primary">Edit</a></td>
             
             <td>
-                <form action="{{ route('trails.destroy', [$trail->id])}}" method="post">
+                <form action="{{ route('states.destroy', [$state->id])}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Delete</button>

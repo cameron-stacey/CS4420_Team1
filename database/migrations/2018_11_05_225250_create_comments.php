@@ -16,8 +16,9 @@ class CreateComments extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('trailId');
-            $table->foreign('trailId')->references('trailId')->on('trails');
+            $table->foreign('trailId')->references('id')->on('trails');
             $table->text('comment');
+            $table->timestamps();
         });
         //
     }

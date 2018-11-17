@@ -14,7 +14,9 @@ class TrailController extends Controller
      */
     public function index()
     {
-        //
+        $trails = Trail::all();
+        
+        return view('trails.index', compact('trails'));
     }
 
     /**
@@ -74,7 +76,9 @@ class TrailController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trail = Trail::find($id);
+        
+        return view('trails.edit', compact('trail'));
     }
 
     /**
@@ -86,7 +90,25 @@ class TrailController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'elevation'=> 'required|integer',
+            'distance' => 'required|integer',
+            'duration'=> 'required|integer',
+            'difficulty'=> 'required|string',
+            'pet_friendly'=> 'required|integer'
+        ]);
+        
+        $trail = Trail::find($id);
+        $trail->name = $request->get('name');
+        $trail->elevation = $request->get('elevation');
+        $trail->distance = $request->get('distance');
+        $trail->duration = $request->get('duration');
+        $trail->difficulty = $request->get('difficulty');
+        $trail->pet_friendly = $request->get('pet_friendly');
+        $trail->save();
+        
+        return redirect('/trails')->with('success', 'Trail has been updated');
     }
 
     /**
@@ -97,6 +119,9 @@ class TrailController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $trail = Trail::find($id);
+        $trail->delete();
+        
+        return redirect('trails')->with('success', 'Trail has been successfully deleted');
     }
 }

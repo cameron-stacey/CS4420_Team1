@@ -15,12 +15,13 @@ class CreateCityState extends Migration
     public function up()
     {
         Schema::create('cityState', function (Blueprint $table) {
-            $table->increments('locationId');
+            $table->increments('id');
             $table->unsignedInteger('cityId');
-            $table->foreign('cityId')->references('cityId')->on('city');
+            $table->foreign('cityId')->references('id')->on('cities');
             $table->unsignedInteger('stateId');
-            $table->foreign('stateId')->references('stateId')->on('state');
+            $table->foreign('stateId')->references('id')->on('states');
             $table->string('address');
+            $table->timestamps();
         });
         //
     }

@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/trails') }}">Trails</a> 
-                    <a href="{{ url('/gallery') }}">Gallery</a>
+                    <a href="{{ route('trails.index') }}">Trails</a> 
+                    <a href="">Gallery</a>
                     <a href="">Videos</a>
                 </div>
             </div>
