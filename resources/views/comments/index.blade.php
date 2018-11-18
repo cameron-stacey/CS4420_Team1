@@ -19,13 +19,13 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($trails as $trail)
+        @foreach($comments as $comment)
         <tr>
-            <td>{{$trail->comment}}</td>
-            <td><a href="{{ route('trails.edit',[$trail->id])}}" class="btn btn-primary">Edit</a></td>
+            <td>{{$comment->comment}}</td>
+            <td><a href="{{ route('comments.edit',[$comment->id])}}" class="btn btn-primary">Edit</a></td>
             
             <td>
-                <form action="{{ route('trails.destroy', [$trail->id])}}" method="post">
+                <form action="{{ route('comments.destroy', [$comment->id])}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Delete</button>

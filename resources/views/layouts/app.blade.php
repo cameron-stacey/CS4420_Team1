@@ -66,8 +66,12 @@
                                     </form>
                                     
                                     <a class="dropdown-item" href="{{ url('/') }}">{{ __('Home') }}</a>
-                                    <a class="dropdown-item" href="{{ url('/trails') }}">{{ __('Trails') }}</a>
-                                    <a class="dropdown-item" href="{{ url('/gallery') }}">{{ __('Gallery') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/states') }}">{{ __('States') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/cities') }}">{{ __('Cities') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/comments') }}">{{ __('Comments') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/guides') }}">{{ __('Guides') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/pics') }}">{{ __('Pictures') }}</a>
+                                    <a class="dropdown-item" href="{{ url('/pics/create') }}">{{ __('Add Pictures') }}</a>
                                 </div>
                             </li>
                         @endguest

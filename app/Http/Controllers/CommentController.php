@@ -3,7 +3,7 @@
 namespace trailBuddy\Http\Controllers;
 
 use Illuminate\Http\Request;
-use trailBuddy\comment;
+use trailBuddy\Comment;
 
 class CommentController extends Controller
 {
