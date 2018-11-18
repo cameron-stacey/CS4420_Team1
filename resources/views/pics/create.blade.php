@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Add Picture
+    Select the file to upload.
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -21,20 +21,14 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('pics.store') }}">
-          <div class="form-group">
-              @csrf
-              <label for="trailId">Trail:</label>
-              <input type="text" class="form-control" name="trailId"/>
-          </div>
-          <div class="form-group">
-              <label for="name">name:</label>
-              <input type="text" class="form-control" name="name"/>
-          </div>
-          <div class="form-group">
-              <label for="url">Path:</label>
-              <input type="text" class="form-control" name="url"/>
-          </div>
-          <button type="submit" class="btn btn-primary">Add</button>
+          <body>
+              <?php
+                 echo Form::open(array('url' => '/uploadfile','files'=>'true'));
+                 echo Form::file('image');
+                 echo Form::submit('Upload File');
+                 echo Form::close();
+              ?>
+           </body>
       </form>
   </div>
 </div>

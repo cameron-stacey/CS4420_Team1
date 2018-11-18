@@ -3,6 +3,7 @@
 namespace trailBuddy\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use trailBuddy\Pic;
 
 class PicController extends Controller
@@ -38,14 +39,11 @@ class PicController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'trailId'=>'required',
-            'name'=>'required',
-            'path'=>'required'
+            'image'=>'required'
     ]);
-         $pic = new Pic([
-             'trailId' => $request->get('trailId'),
-             'name' => $request->get('name'),
-             'path' => $request->get('path')
+        $path = Storage::disk('local')->put('image', $request->file('image'), 'public');
+        $pic = new Pic([
+             'path' => $path
     ]);
         $pic->save();
         return redirect('/pics')->with('success', 'Picture has been added');
@@ -84,19 +82,7 @@ class PicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'trailId'=>'required',
-            'name'=>'required',
-            'path'=>'required'
-        ]);
-        
-        $pic = Pic::find($id);
-        $pic->trailId = $request->get('trailId');
-        $pic->name = $request->get('name');
-        $pic->path = $request->get('path');
-        $pic->save();
-        
-        return redirect('/pics')->with('success', 'Picture has been updated');
+        //
     }
 
     /**
