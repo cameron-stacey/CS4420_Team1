@@ -17,7 +17,7 @@ class pics_seeder extends Seeder
             DB::table('pics')->insert([
                 'id' => $i + 1,
                 'trailId' =>  DB::table('trails')->where('id', 1)->value('id'),
-                'picName' => $picNames[$i],
+                'name' => $picNames[$i],
                 'path' => $fileNames[$i],
             ]);
         }
