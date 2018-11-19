@@ -20,16 +20,16 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('pics.store') }}">
-          <body>
-              <?php
-                 echo Form::open(array('url' => '/uploadfile','files'=>'true'));
-                 echo Form::file('image');
-                 echo Form::submit('Upload File');
-                 echo Form::close();
-              ?>
-           </body>
-      </form>
+      {!! Form::open(array('route' => 'pics.store','enctype' => 'multipart/form-data')) !!}
+        <div class="row cancel">
+          <div class="col-md-4">
+            {!! Form::file('image', array('class' => 'image')) !!}
+          </div>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-success">Create</button>
+          </div>
+        </div>
+      {!! Form::close() !!}
   </div>
 </div>
 @endsection

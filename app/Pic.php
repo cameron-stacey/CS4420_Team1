@@ -8,7 +8,7 @@ class Pic extends Model
 {
     protected $fillable = [
         'tailID',
-        'file',
+        'name',
         'path'
     ];
 }

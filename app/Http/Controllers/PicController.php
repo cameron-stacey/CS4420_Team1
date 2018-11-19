@@ -39,11 +39,22 @@ class PicController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image'=>'required'
+            'image'=>'required|image'
     ]);
-        $path = Storage::disk('local')->put('image', $request->file('image'), 'public');
+        
+        $image = $request->file('image');
+        
+        //$input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+       // $destinationPath = public_path('/storage');
+        //$image->move($destinationPath, $input['imagename']);
+        
+        //$this->postImage->add($input);
+        $fileName = $image->getClientOriginalName();
+        
+        $path = Storage::putFileAs('public', $image, $fileName);
         $pic = new Pic([
-             'path' => $path
+            'name' => $fileName,
+            'path' => $path
     ]);
         $pic->save();
         return redirect('/pics')->with('success', 'Picture has been added');
@@ -94,6 +105,9 @@ class PicController extends Controller
     public function destroy($id)
     {
         $pic = Pic::find($id);
+        $fileName = $pic['path'];
+        
+        Storage::delete($fileName);
         $pic->delete();
         
         return redirect('pics')->with('success', 'Picture has been successfully deleted');
