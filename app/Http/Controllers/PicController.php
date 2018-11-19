@@ -51,7 +51,8 @@ class PicController extends Controller
         //$this->postImage->add($input);
         $fileName = $image->getClientOriginalName();
         
-        $path = Storage::putFileAs('public', $image, $fileName);
+        Storage::putFileAs('public', $image, $fileName);
+        $path = "/storage/" . $fileName;
         $pic = new Pic([
             'name' => $fileName,
             'path' => $path
@@ -113,7 +114,7 @@ class PicController extends Controller
     public function destroy($id)
     {
         $pic = Pic::find($id);
-        $fileName = $pic['path'];
+        $fileName = "/public/" . $pic['name'];
         
         Storage::delete($fileName);
         $pic->delete();
