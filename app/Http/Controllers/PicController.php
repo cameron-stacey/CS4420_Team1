@@ -93,7 +93,15 @@ class PicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required'
+        ]);
+        
+        $pic = Pic::find($id);
+        $pic->name = $request->get('name');
+        $pic->save();
+        
+        return redirect('/pics')->with('success', 'Picture has been updated');
     }
 
     /**

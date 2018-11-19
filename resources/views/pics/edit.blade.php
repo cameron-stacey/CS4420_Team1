@@ -25,16 +25,8 @@
         @csrf
         <div class="form-group">
               @csrf
-              <label for="trailId">Trail:</label>
-              <input type="text" class="form-control" name="trailId"/>
-        </div>
-        <div class="form-group">
               <label for="name">Name:</label>
               <input type="text" class="form-control" name="name"/>
-        </div>
-        <div class="form-group">
-              <label for="path">Path:</label>
-              <input type="text" class="form-control" name="path"/>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
       </form>
