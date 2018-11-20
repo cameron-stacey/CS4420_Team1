@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Explore</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <div class="content">
+                        
+                        <div class="links">
+                            <a href="{{ route('trails.index') }}">Trails</a><br> 
+                            <a href="{{ route('pics.index') }}">Gallery</a><br> 
+                            <a href="{{ route('pics.create') }}">Add Pictures</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

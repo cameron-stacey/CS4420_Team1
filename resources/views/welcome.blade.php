@@ -83,12 +83,6 @@
                 <div class="title m-b-md">
                     Trail Buddy
                 </div>
-
-                <div class="links">
-                    <a href="{{ route('trails.index') }}">Trails</a> 
-                    <a href="">Gallery</a>
-                    <a href="">Videos</a>
-                </div>
             </div>
         </div>
     </body>
