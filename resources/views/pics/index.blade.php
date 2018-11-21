@@ -15,7 +15,7 @@
   <body>
     @foreach($pics as $pic)
     <tr>
-      <img class="thumbnails" src="{{$pic->path}}" alt="{{$pic->name}}">
+      <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}">
         <td><a href="{{ route('pics.edit',[$pic->id])}}" class="btn btn-primary">Edit</a></td>
         <td>
             <form action="{{ route('pics.destroy', [$pic->id])}}" method="post">

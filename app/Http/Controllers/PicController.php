@@ -50,15 +50,16 @@ class PicController extends Controller
         
         //$this->postImage->add($input);
         $fileName = $image->getClientOriginalName();
-        echo $fileName;
-        /*Storage::putFileAs('public', $image, $fileName);
+        $destinationPath = public_path('/storage');
+        $image->move($destinationPath, $fileName);
+        //Storage::putFileAs('public', $image, $fileName);
         $path = "/storage/" . $fileName;
         $pic = new Pic([
             'name' => $fileName,
             'path' => $path
     ]);
         $pic->save();
-        return redirect('/pics')->with('success', 'Picture has been added');*/
+        return redirect('/pics')->with('success', 'Picture has been added');
     }
 
     /**
