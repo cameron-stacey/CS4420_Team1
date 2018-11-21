@@ -30,3 +30,4 @@ Route::resource('comments', 'CommentController');
 Route::resource('guides', 'GuideController');
 
 Route::resource('pics', 'PicController');
+

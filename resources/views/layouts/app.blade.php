@@ -17,7 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/_bootswatch.scss') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/_variables.scss') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="app">
