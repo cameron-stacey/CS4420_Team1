@@ -115,11 +115,14 @@ class PicController extends Controller
     public function destroy($id)
     {
         $pic = Pic::find($id);
-        $fileName = "/public/" . $pic['name'];
-        
-        Storage::delete($fileName);
-        $pic->delete();
-        
-        return redirect('pics')->with('success', 'Picture has been successfully deleted');
+        $path = public_path('/storage/').$pic['name'];
+        if(file_exists($path)){
+            unlink($path);
+            $pic->delete();
+            return redirect('pics')->with('success', 'Picture has been successfully deleted');
+        }
+        else{
+            return redirect('pics')->with('failure', 'Picture was not deleted');
+        }
     }
 }
