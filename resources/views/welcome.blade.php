@@ -8,14 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Trail Buddy</title>
-
         <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        
+         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/_bootswatch.scss') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/_variables.scss') }}" rel="stylesheet" type="text/css" />
         <style>
+       
             html, body {
-                background-color: #c0f7b7;
+                background-color: #ffffff;
                 color: #1b223d;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;

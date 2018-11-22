@@ -21,7 +21,7 @@
 
 <!-- Custom styles for this template -->
 
-<link href="/css/album.css" rel="stylesheet">
+
 
 <meta charset="utf-8">
 
@@ -39,4 +39,3 @@
 
 <!-- Custom styles for this template -->
 
-<link href="/css/album.css" rel="stylesheet">
