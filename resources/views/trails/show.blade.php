@@ -22,11 +22,9 @@
           <td>Duration</td>
           <td>Difficulty</td>
           <td>Pet Friendly</td>
-          <td colspan="3">Action</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($trails as $trail)
         <tr>
             <td>{{$trail->name}}</td>
             <td>{{$trail->elevation}}</td>
@@ -35,18 +33,11 @@
             <td>{{$trail->duration}}</td>
             <td>{{$trail->difficulty}}</td>
             <td>{{$trail->pet_friendly}}</td>
-            <td><a href="{{ route('trails.show',[$trail->id])}}" class="btn btn-primary">Comments</a></td>
-            <td><a href="{{ route('trails.edit',[$trail->id])}}" class="btn btn-primary">Edit</a></td>
-            
-            <td>
-                <form action="{{ route('trails.destroy', [$trail->id])}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
-                </form>
-            </td>
-            </td>
         </tr>
+        @foreach($comments as $comment)
+        <td>
+            <td>{{$comment->comment}}</td>
+        </td>>
         @endforeach
     </tbody>
   </table>

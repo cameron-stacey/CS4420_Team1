@@ -10,4 +10,11 @@ class Comment extends Model
         'trailID',
         'comment'
     ];
+    
+    public function comment()
+    
+    {
+        return $this->belongsTo('Trail');
+    }
+    
 }

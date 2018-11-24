@@ -29,3 +29,6 @@ Stack trace:
 [16-Nov-2018 21:38:22 UTC] PHP Fatal error:  Class 'trail_buddy\app\Http\Controller' not found in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/TrailController.php on line 8
 [19-Nov-2018 06:30:19 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 115348992 bytes) in /home/ubuntu/workspace/trail_buddy/vendor/filp/whoops/src/Whoops/Util/HtmlDumperOutput.php on line 23
 [19-Nov-2018 07:06:05 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 12162880 bytes) in /home/ubuntu/workspace/trail_buddy/vendor/symfony/var-dumper/Dumper/AbstractDumper.php on line 209
+[24-Nov-2018 20:45:02 UTC] PHP Fatal error:  Class 'trailBuddy\Eloquent' not found in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 19
+[24-Nov-2018 20:45:35 UTC] PHP Fatal error:  Class 'trailBuddy\Eloquent' not found in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 19
+[24-Nov-2018 22:31:46 UTC] PHP Fatal error:  Cannot use app\Comment as Comment because the name is already in use in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 7

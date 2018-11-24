@@ -3,6 +3,7 @@
 namespace trailBuddy;
 
 use Illuminate\Database\Eloquent\Model;
+use trail_buddy\app\Comment;
 
 class Trail extends Model
 {
@@ -14,4 +15,10 @@ class Trail extends Model
       'difficulty',
       'pet_friendly'
     ];
+    
+    public function comments()
+    
+    {
+      return $this->hasMany('Comment');
+    }
 }
