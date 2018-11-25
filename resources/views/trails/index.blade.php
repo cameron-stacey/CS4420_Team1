@@ -16,7 +16,7 @@
     <thead>
         <tr>
           <td>Name</td>
-          <td>Elevation</td>
+          <td>Elevation Gain</td>
           <td>Location</td>
           <td>Distance</td>
           <td>Duration</td>
@@ -29,10 +29,10 @@
         @foreach($trails as $trail)
         <tr>
             <td><a href="{{ route('trails.show',[$trail->id,'comments'])}}" class="btn">{{$trail->name}}</a></td>
-            <td>{{$trail->elevation}}</td>
+            <td>{{$trail->elevation}} feet.</td>
             <td>{{$trail->location}}</td>
-            <td>{{$trail->distance}}</td>
-            <td>{{$trail->duration}}</td>
+            <td>{{$trail->distance}} mile(s)</td>
+            <td>{{$trail->duration}} hour(s)</td>
             <td>{{$trail->difficulty}}</td>
             <td>{{$trail->pet_friendly}}</td>
             <td><a href="{{ route('trails.edit',[$trail->id])}}" class="btn btn-primary">Edit</a></td>
