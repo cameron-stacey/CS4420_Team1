@@ -34,12 +34,12 @@
             <td>{{$trail->difficulty}}</td>
             <td>{{$trail->pet_friendly}}</td>
         </tr>
-        @foreach($pics as $pic)
-        <td>
-            <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}"></img>
-        </td>
-        @endforeach
     </tbody>
   </table>
+  @foreach($pics as $pic)
+  <td>
+      <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}"></img>
+  </td>
+  @endforeach
 <div>
 @endsection
