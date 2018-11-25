@@ -49,5 +49,6 @@
         @endforeach
     </tbody>
   </table>
+  <td><a href="{{ route('trails.create')}}" class="btn btn-success">New Trail</a></td>
 <div>
 @endsection
