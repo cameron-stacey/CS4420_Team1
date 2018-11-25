@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-left">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Explore</div>
@@ -17,9 +17,7 @@
                     <div class="content">
                         
                         <div class="links">
-                            <a href="{{ route('trails.index') }}">Trails</a><br> 
-                            <a href="{{ route('pics.index') }}">Gallery</a><br> 
-                            <a href="{{ route('pics.create') }}">Add Pictures</a>
+                            <a href="{{ route('trails.index') }}">Trails</a><br>
                         </div>
                     </div>
                 </div>
