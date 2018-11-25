@@ -5,6 +5,7 @@ namespace trailBuddy\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use trailBuddy\Pic;
+use trailBuddy\Trail;
 
 class PicController extends Controller
 {
@@ -60,6 +61,34 @@ class PicController extends Controller
     ]);
         $pic->save();
         return redirect('/pics')->with('success', 'Picture has been added');
+    }
+    
+    public function trail_create($id)
+    {
+        $trail = Trail::find($id);
+        return view('pics.trail', compact('trail'));
+    }
+    
+    public function upload(Request $request, $id)
+    {
+        $request->validate([
+            'image'=>'required|image'
+        ]);
+        
+        $image = $request->file('image');
+        $fileName = $image->getClientOriginalName();
+        $destinationPath = public_path('/storage');
+        $path = "/storage/" . $fileName;
+        
+        $pic = new Pic([]);
+        $pic->trail()->associate($id);
+        $pic->name = $fileName;
+        $pic->path = $path;
+        
+        $pic->save();
+        $image->move($destinationPath, $fileName);
+        return redirect('/trails')->with('success', 'Picture has been added');
+        
     }
 
     /**

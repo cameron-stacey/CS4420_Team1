@@ -33,3 +33,7 @@ Route::resource('guides', 'GuideController');
 
 Route::resource('pics', 'PicController');
 
+Route::get('pics/{trail}/trail', ["uses" => 'PicController@trail_create', "as" => 'pics.trail']);
+
+Route::post('pics/{trail}', ["uses" => 'PicController@upload', "as" => 'pics.upload']);
+

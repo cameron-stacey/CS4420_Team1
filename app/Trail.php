@@ -3,10 +3,15 @@
 namespace trailBuddy;
 
 use Illuminate\Database\Eloquent\Model;
-use trail_buddy\app\Comment;
+use trailBuddy\Pic;
 
 class Trail extends Model
 {
+    public function pics()
+    {
+      return $this->hasMany(Pic::class);
+    }
+    
     protected $fillable = [
       'name',
       'elevation',

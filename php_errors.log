@@ -32,3 +32,6 @@ Stack trace:
 [24-Nov-2018 20:45:02 UTC] PHP Fatal error:  Class 'trailBuddy\Eloquent' not found in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 19
 [24-Nov-2018 20:45:35 UTC] PHP Fatal error:  Class 'trailBuddy\Eloquent' not found in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 19
 [24-Nov-2018 22:31:46 UTC] PHP Fatal error:  Cannot use app\Comment as Comment because the name is already in use in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 7
+[25-Nov-2018 20:14:03 UTC] PHP Fatal error:  Class 'trailBuddy\Eloquent' not found in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 8
+[25-Nov-2018 20:14:16 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent' not found in /home/ubuntu/workspace/trail_buddy/app/Trail.php on line 9
+[25-Nov-2018 20:57:55 UTC] PHP Fatal error:  Can't use function return value in write context in /home/ubuntu/workspace/trail_buddy/app/Http/Controllers/PicController.php on line 89
