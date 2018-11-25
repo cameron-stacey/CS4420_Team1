@@ -4,6 +4,7 @@ namespace trailBuddy\Http\Controllers;
 
 use Illuminate\Http\Request;
 use trailBuddy\Comment;
+use trailBuddy\Trail;
 
 class CommentController extends Controller
 {
@@ -47,6 +48,26 @@ class CommentController extends Controller
     ]);
         $comment->save();
         return redirect('/comments')->with('success', 'Comment has been added');
+    }
+    
+    public function trail_create($id)
+    {
+        $trail = Trail::find($id);
+        return view('comments.trail', compact('trail'));
+    }
+    
+    public function upload(Request $request, $id)
+    {
+        $request->validate([
+            'comment'=>'required'
+        ]);
+    
+        $comment = new Comment([]);
+        $comment->trail()->associate($id);
+        $comment->comment = $request->get('comment');
+        $comment->save();
+        
+        return redirect('/trails')->with('success', 'Comment has been added');
     }
 
     /**

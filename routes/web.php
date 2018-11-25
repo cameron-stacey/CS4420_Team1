@@ -29,6 +29,10 @@ Route::resource('cities', 'CitiesController');
 
 Route::resource('comments', 'CommentController');
 
+Route::get('comments/{trail}/trail', ["uses" => 'CommentController@trail_create', "as" => 'comments.trail']);
+
+Route::post('comments/{trail}', ["uses" => 'CommentController@upload', "as" => 'comments.upload']);
+
 Route::resource('guides', 'GuideController');
 
 Route::resource('pics', 'PicController');

@@ -36,13 +36,13 @@
             <td>{{$trail->pet_friendly}}</td>
             <td><a href="{{ route ('trails.photos',[$trail->id])}}" class="btn btn-primary">View</a></td>
             <td><a href="{{ route ('pics.trail',[$trail->id])}}" class="btn btn-primary">Import</a></td>
-        </tr>
-        @foreach($comments as $comment)
-        <td>
-            <td>{{$comment->comment}}</td>
-        </td>>
-        @endforeach
     </tbody>
   </table>
+  @foreach($comments as $comment)
+  <td>
+      <td>{{$comment->comment}}<br></td>
+  </td>>
+  @endforeach
+  <td><a href="{{ route ('comments.trail',[$trail->id])}}" class="btn btn-success">Comment</a></td>
 <div>
 @endsection

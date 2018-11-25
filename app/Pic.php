@@ -11,6 +11,7 @@ class Pic extends Model
     {
         return $this->belongsTo(Trail::class, 'trailId');
     }
+    
     protected $fillable = [
         'tailId',
         'name',
