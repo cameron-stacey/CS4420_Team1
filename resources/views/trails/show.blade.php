@@ -22,7 +22,7 @@
           <td>Duration</td>
           <td>Difficulty</td>
           <td>Pet Friendly</td>
-          <td>Photos</td>
+          <td colspan="2">Photos</td>
         </tr>
     </thead>
     <tbody>
@@ -34,7 +34,8 @@
             <td>{{$trail->duration}}</td>
             <td>{{$trail->difficulty}}</td>
             <td>{{$trail->pet_friendly}}</td>
-            <td><a href="{{ route ('trails.photos',[$trail->id])}}" class="btn btn-primary">View Photos</a></td>
+            <td><a href="{{ route ('trails.photos',[$trail->id])}}" class="btn btn-primary">View</a></td>
+            <td><a href="{{ route ('pics.create',[$trail->id])}}" class="btn btn-primary">Import</a></td>
         </tr>
         @foreach($comments as $comment)
         <td>
