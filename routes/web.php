@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('trails', 'TrailController');
 
+Route::get('trails/{trail}/photos', array('as' => 'trails.photos', 'uses' => 'TrailController@photos'));
+
 Route::resource('states', 'StateController');
 
 Route::resource('cities', 'CitiesController');

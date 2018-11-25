@@ -22,7 +22,6 @@
           <td>Duration</td>
           <td>Difficulty</td>
           <td>Pet Friendly</td>
-          <td>Photos</td>
         </tr>
     </thead>
     <tbody>
@@ -34,12 +33,11 @@
             <td>{{$trail->duration}}</td>
             <td>{{$trail->difficulty}}</td>
             <td>{{$trail->pet_friendly}}</td>
-            <td><a href="{{ route ('trails.photos',[$trail->id])}}" class="btn btn-primary">View Photos</a></td>
         </tr>
-        @foreach($comments as $comment)
-        <td>
-            <td>{{$comment->comment}}</td>
-        </td>>
+        @foreach($pics as $pic)
+        
+            <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}">
+        
         @endforeach
     </tbody>
   </table>

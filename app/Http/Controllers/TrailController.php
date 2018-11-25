@@ -5,6 +5,7 @@ namespace trailBuddy\Http\Controllers;
 use Illuminate\Http\Request;
 use trailBuddy\Trail;
 use trailBuddy\Comment;
+use trailBuddy\Pic;
 
 class TrailController extends Controller
 {
@@ -67,8 +68,15 @@ class TrailController extends Controller
     public function show($id)
     {
         $trail = Trail::find($id);
-        $comments = Comment::all()->where('id', $id);
+        $comments = Comment::all()->where('trailId', $id);
         return view('trails.show', compact('trail'), compact('comments'));
+    }
+    
+    public function photos($id)
+    {
+        $trail = Trail::find($id);
+        $pics = Pic::all()->where('trailID',$id);
+        return view('trails.photos', compact('trail'), compact('pics'));
     }
 
     /**

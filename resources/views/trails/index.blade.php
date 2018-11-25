@@ -28,14 +28,13 @@
     <tbody>
         @foreach($trails as $trail)
         <tr>
-            <td>{{$trail->name}}</td>
+            <td><a href="{{ route('trails.show',[$trail->id,'comments'])}}" class="btn">{{$trail->name}}</a></td>
             <td>{{$trail->elevation}}</td>
             <td>{{$trail->location}}</td>
             <td>{{$trail->distance}}</td>
             <td>{{$trail->duration}}</td>
             <td>{{$trail->difficulty}}</td>
             <td>{{$trail->pet_friendly}}</td>
-            <td><a href="{{ route('trails.show',[$trail->id])}}" class="btn btn-primary">Comments</a></td>
             <td><a href="{{ route('trails.edit',[$trail->id])}}" class="btn btn-primary">Edit</a></td>
             
             <td>
