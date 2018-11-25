@@ -11,10 +11,4 @@ class Comment extends Model
         'comment'
     ];
     
-    public function comment()
-    
-    {
-        return $this->belongsTo('Trail');
-    }
-    
 }

@@ -35,9 +35,9 @@
             <td>{{$trail->pet_friendly}}</td>
         </tr>
         @foreach($pics as $pic)
-        
-            <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}">
-        
+        <td>
+            <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}"></img>
+        </td>
         @endforeach
     </tbody>
   </table>

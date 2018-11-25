@@ -75,7 +75,7 @@ class TrailController extends Controller
     public function photos($id)
     {
         $trail = Trail::find($id);
-        $pics = Pic::all()->where('trailID',$id);
+        $pics = Pic::all()->where('trailId', $id);
         return view('trails.photos', compact('trail'), compact('pics'));
     }
 

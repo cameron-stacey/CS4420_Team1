@@ -15,10 +15,5 @@ class Trail extends Model
       'difficulty',
       'pet_friendly'
     ];
-    
-    public function comments()
-    
-    {
-      return $this->hasMany('Comment');
-    }
+   
 }
