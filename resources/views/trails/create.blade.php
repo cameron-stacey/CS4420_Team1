@@ -44,7 +44,8 @@
           </div>
           <div class="form-group">
               <label for="pet_friendly">Pet Friendly</label>
-              <input type="text" class="form-control" name="pet_friendly"/>
+              <input type="radio" class="form-control" name="pet_friendly" value="yes" checked/> Yes<br>
+              <input type="radio" class="form-control" name="pet_friendly" value="no"/> No
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
       </form>

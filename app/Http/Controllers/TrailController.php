@@ -55,16 +55,20 @@ class TrailController extends Controller
             'distance' => 'required|integer',
             'duration'=> 'required|integer',
             'difficulty'=> 'required|string',
-            'pet_friendly'=> 'required|integer'
-    ]);
+            'pet_friendly'=> 'required'
+        ]);
+        $pet = 0;
+        if($request->get('pet_friendly') == "yes"){
+            $pet = 1;
+        }
          $trail = new Trail([
             'name' => $request->get('name'),
             'elevation'=> $request->get('elevation'),
             'distance'=> $request->get('distance'),
             'duration'=> $request->get('duration'),
             'difficulty'=> $request->get('difficulty'),
-            'pet_friendly'=> $request->get('pet_friendly')
-    ]);
+            'pet_friendly'=> $pet
+        ]);
         $trail->save();
         return redirect('/trails')->with('success', 'Trail has been added');
     }
