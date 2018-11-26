@@ -78,6 +78,14 @@ class TrailController extends Controller
     public function show($id)
     {
         $trail = Trail::find($id);
+        if($trail->pet_friendly == 1)
+        {
+            $trail -> pet_friendly = "YES";
+        }
+        else
+        {
+            $trail -> pet_friendly = "NO";
+        }
         $comments = Comment::all()->where('trailId', $id);
         return view('trails.show', compact('trail', 'comments'));
     }
