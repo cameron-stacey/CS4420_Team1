@@ -17,7 +17,17 @@ class TrailController extends Controller
     public function index()
     {
         $trails = Trail::all();
-        
+        foreach($trails as $trail)
+        {
+            if($trail->pet_friendly == 1)
+            {
+                $trail -> pet_friendly = "YES";
+            }
+            else
+            {
+                $trail -> pet_friendly = "NO";
+            }
+        }
         return view('trails.index', compact('trails'));
     }
 

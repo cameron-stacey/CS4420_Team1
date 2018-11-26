@@ -38,7 +38,7 @@
   </table>
   @foreach($pics as $pic)
   <td>
-      <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}"></img>
+      <img class="thumbnails" src="{{ URL::to ($pic->path) }}" alt="{{$pic->name}}" style="max-width:30%;height:auto;"></img>
   </td>
   @endforeach
 <div>

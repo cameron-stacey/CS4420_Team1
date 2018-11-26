@@ -41,7 +41,7 @@
   @foreach($comments as $comment)
   <td>
       <td>{{$comment->comment}}<br></td>
-  </td>>
+  </td>
   @endforeach
   <td><a href="{{ route ('comments.trail',[$trail->id])}}" class="btn btn-success">Comment</a></td>
 <div>
