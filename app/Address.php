@@ -4,7 +4,7 @@ namespace trailBuddy;
 
 use Illuminate\Database\Eloquent\Model;
 
-class State extends Model
+class Address extends Model
 {
     public function trails()
     {

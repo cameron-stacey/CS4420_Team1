@@ -1,5 +1,3 @@
-@extends('layouts/welcome')
-
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -14,17 +12,18 @@
 
         <!-- Styles -->
         
-         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/_bootswatch.scss') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/_variables.scss') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/_bootswatch.scss') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/_variables.scss') }}" rel="stylesheet" type="text/css" />
         <style>
        
             html, body {
                 background-color: #ffffff;
-                color: #1b223d;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                background-image: url('/storage/IMG_4841.JPG');
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-weight: 600;
                 height: 100vh;
                 margin: 0;
             }
@@ -54,18 +53,21 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 1000%;
+                color: #3399FF;
+                text-shadow: 2px 2px 8px #ffffff;
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
+                color: black;
+                background-color: green;
+                padding: 10px 25px;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
+            }SS
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -91,6 +93,16 @@
                 <div class="title m-b-md">
                     Trail Buddy
                 </div>
+                @if (Route::has('login'))
+                    <div>
+                        @auth
+                            <a href="{{ url('/home') }}">Home</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('register') }}">Register</a>
+                        @endauth
+                    </div>
+                @endif
             </div>
         </div>
     </body>

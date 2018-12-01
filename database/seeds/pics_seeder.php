@@ -11,12 +11,12 @@ class pics_seeder extends Seeder
      */
     public function run()
     {
-        $fileNames = ["devils-playground-colorado.jpg","p1010247.jpg","trail-us-colorado-pikes-peak-from-devils-playground-at-map-13266507-1504457114-1200x630-3-6.jpg"];
+        $fileNames = ["/storage/devils-playground-colorado.jpg","/storage/p1010247.jpg","/storage/trail-us-colorado-pikes-peak-from-devils-playground-at-map-13266507-1504457114-1200x630-3-6.jpg"];
         $picNames = ["sign","devils playground trail","devils playground info"];
         for($i = 0; $i < sizeof($fileNames); $i++){
             DB::table('pics')->insert([
                 'id' => $i + 1,
-                'trailId' =>  DB::table('trails')->where('id', 1)->value('id'),
+                'trailId' =>  DB::table('trails')->where('id', 8)->value('id'),
                 'name' => $picNames[$i],
                 'path' => $fileNames[$i],
             ]);

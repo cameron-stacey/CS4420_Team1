@@ -17,7 +17,9 @@
         <tr>
           <td>Name</td>
           <td>Elevation Gain</td>
-          <td>Location</td>
+          <td>City</td>
+          <td>State</td>
+          <td>Address</td>
           <td>Distance</td>
           <td>Duration</td>
           <td>Difficulty</td>
@@ -30,7 +32,9 @@
         <tr>
             <td><a href="{{ route('trails.show',[$trail->id,'comments'])}}" class="btn">{{$trail->name}}</a></td>
             <td>{{$trail->elevation}} feet.</td>
-            <td>{{$trail->location}}</td>
+            <td>{{$trail->city->name}}</td>
+            <td>{{$trail->state->name}}</td>
+            <td>{{$trail->address->address}}</td>
             <td>{{$trail->distance}} mile(s)</td>
             <td>{{$trail->duration}} hour(s)</td>
             <td>{{$trail->difficulty}}</td>

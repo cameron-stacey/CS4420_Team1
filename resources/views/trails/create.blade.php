@@ -27,6 +27,33 @@
               <input type="text" class="form-control" name="name"/>
           </div>
           <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" class="form-control" name="city" list="city"/>
+              <datalist id="city">
+                @foreach ($cities as $city)
+                <option value="{{$city}}">
+                @endforeach
+              </datalist>
+          </div>
+          <div class="form-group">
+              <label for="state">State:</label>
+              <input type="text" class="form-control" name="state" list="state"/>
+              <datalist id="state">
+                @foreach ($states as $state)
+                <option value="{{$state}}">
+                @endforeach
+              </datalist>
+          </div>
+          <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" class="form-control" name="address" list="address"/>
+              <datalist id="address">
+                @foreach ($addresses as $address)
+                <option value="{{$address}}">
+                @endforeach
+              </datalist>
+          </div>
+          <div class="form-group">
               <label for="elevation">Elevation:</label>
               <input type="text" class="form-control" name="elevation"/>
           </div>

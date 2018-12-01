@@ -17,7 +17,9 @@
         <tr>
           <td>Name</td>
           <td>Elevation</td>
-          <td>Location</td>
+          <td>City</td>
+          <td>State</td>
+          <td>Address</td>
           <td>Distance</td>
           <td>Duration</td>
           <td>Difficulty</td>
@@ -28,7 +30,9 @@
         <tr>
             <td>{{$trail->name}}</td>
             <td>{{$trail->elevation}}</td>
-            <td>{{$trail->location}}</td>
+            <td>{{$trail->city->name}}</td>
+            <td>{{$trail->state->name}}</td>
+            <td>{{$trail->address->address}}</td>
             <td>{{$trail->distance}}</td>
             <td>{{$trail->duration}}</td>
             <td>{{$trail->difficulty}}</td>

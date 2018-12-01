@@ -20,7 +20,9 @@ class trail_seeder extends Seeder
             DB::table('trails')->insert([
                 'id' => $i+1,
                 'name' => $trails[$i],
-                'locationId' => DB::table('cityState')->where('id', 1)->value('id'),
+                'cityId' => DB::table('cities')->where('id', 1)->value('id'),
+                'stateId' => DB::table('states')->where('id', 6)->value('id'),
+                'addressId' => DB::table('address')->where('id', 1)->value('id'),
                 'elevation' => $elevations[$i],
                 'distance' => $distances[$i],
                 'duration' => $durations[$i],

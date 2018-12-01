@@ -18,8 +18,26 @@ class Trail extends Model
       return $this->hasMany(Comment::class);
     }
     
+    public function city()
+    {
+        return $this->belongsTo(Cities::class, 'cityId');
+    }
+    
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'stateId');
+    }
+    
+    public function address()
+    {
+        return $this->belongsTo(Address::class, 'addressId');
+    }
+    
     protected $fillable = [
       'name',
+      'cityId',
+      'stateId',
+      'addressId',
       'elevation',
       'distance',
       'duration',
