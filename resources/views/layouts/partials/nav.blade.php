@@ -1,105 +1,55 @@
-<div class="collapse bg-inverse" id="navbarHeader">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ config('app.name', 'Trail Buddy') }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="{{ asset('css/tb.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
 
-<div class="container">
+<nav class="navbar navbar-tbuddy navbar-fixed-top">
+  <div class="container-fluid">
+    @guest
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Welcome</a>
+    </div>
+    @else
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">{{ config('app.name', 'Trail Buddy') }}</a>
+    </div>
+    @endguest
+    <ul class="nav navbar-nav navbar-right">
+      <!-- Authenticate Links -->
+      @guest
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+      </li>
+      <li class="nav-item">
+        @if (Route::has('register'))
+        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+        @endif
+      </li>
+      @else
+      <li><a href="/home">{{ Auth::user()->name }}</a></li>
+      <li><a href="/trails">Trails</a></li>
+      <form class="navbar-form navbar-right" action="/under_construction">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class ="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      @endguest
+    </ul>
+  </div>
+</nav>
+</body>
+</html>
 
-<div class="row">
-
-<div class="col-sm-8 py-4">
-
-<h4 class="text-white">About</h4>
-
-<p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-
-</div>
-
-<div class="col-sm-4 py-4">
-
-<h4 class="text-white">Contact</h4>
-
-<ul class="list-unstyled">
-
-<li><a href="#" class="text-white">Follow on Twitter</a></li>
-
-<li><a href="#" class="text-white">Like on Facebook</a></li>
-
-<li><a href="#" class="text-white">Email me</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="navbar navbar-inverse bg-inverse">
-
-<div class="container d-flex justify-content-betIen">
-
-<a href="#" class="navbar-brand">Album</a>
-
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-</div>
-
-</div>
-
-
-
-<div class="collapse bg-inverse" id="navbarHeader">
-
-<div class="container">
-
-<div class="row">
-
-<div class="col-sm-8 py-4">
-
-<h4 class="text-white">About</h4>
-
-<p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-
-</div>
-
-<div class="col-sm-4 py-4">
-
-<h4 class="text-white">Contact</h4>
-
-<ul class="list-unstyled">
-
-<li><a href="#" class="text-white">Follow on Twitter</a></li>
-
-<li><a href="#" class="text-white">Like on Facebook</a></li>
-
-<li><a href="#" class="text-white">Email me</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="navbar navbar-inverse bg-inverse">
-
-<div class="container d-flex justify-content-betIen">
-
-<a href="#" class="navbar-brand">Album</a>
-
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-</div>
-
-</div>

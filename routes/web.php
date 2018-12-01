@@ -41,3 +41,12 @@ Route::get('pics/{trail}/trail', ["uses" => 'PicController@trail_create', "as" =
 
 Route::post('pics/{trail}', ["uses" => 'PicController@upload', "as" => 'pics.upload']);
 
+Route::get('/test', function()
+{
+    return view('/layouts/partials/nav');
+});
+
+Route::get('/under_construction', function()
+{
+    return view('/under_construction');
+});

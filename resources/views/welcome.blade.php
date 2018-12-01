@@ -55,7 +55,14 @@
             .title {
                 font-size: 1000%;
                 color: #3399FF;
-                text-shadow: 2px 2px 8px #ffffff;
+                text-shadow: 2px 2px 8px white;
+            }
+            
+            .title-links {
+                font-size: 150%;
+                color: darkblue;
+                text-shadow: 2px 2px 8px white;
+                padding: 0px 15px;
             }
 
             .links > a {
@@ -76,7 +83,7 @@
         
         
     </head>
-    <body>
+    <body background-image="URL::to{{'/storage/IMG_4841.JPG'}}">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -94,12 +101,12 @@
                     Trail Buddy
                 </div>
                 @if (Route::has('login'))
-                    <div>
+                    <div class="title-links">
                         @auth
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a class="title-links" href="{{ url('/home') }}">Home</a>
                         @else
-                            <a href="{{ route('login') }}">Login</a>
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="title-links" href="{{ route('login') }}">Login</a>
+                            <a class="title-links" href="{{ route('register') }}">Register</a>
                         @endauth
                     </div>
                 @endif

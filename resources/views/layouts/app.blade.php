@@ -21,6 +21,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/_bootswatch.scss') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/_variables.scss') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/tb.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="app">
